@@ -100,7 +100,6 @@ export default class Stats extends fs.Stats {
     ctimeMs?: number,
     birthtimeMs?: number) {
     super();
-      
     this.size = size;
     let currentTime = 0;
     if (typeof(atimeMs) !== 'number') {
