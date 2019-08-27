@@ -63,6 +63,10 @@ export default class Stats implements fs.Stats {
   public ctimeMs: number;
   public birthtimeMs: number;
   public size: number;
+  public atimeMs: number;
+  public mtimeMs: number;
+  public ctimeMs: number;
+  public birthtimeMs: number;
 
   public get atime(): Date {
     return new Date(this.atimeMs);
