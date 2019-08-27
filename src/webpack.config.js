@@ -51,7 +51,8 @@ module.exports = {
   node: {
     process: false,
     Buffer: false,
-    setImmediate: false
+    setImmediate: false,
+    fs: 'empty'
   },
   target: 'web',
   module: {
