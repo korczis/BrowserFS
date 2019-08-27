@@ -16,7 +16,7 @@ export enum FileType {
  * @see http://nodejs.org/api/fs.html#fs_class_fs_stats
  * @see http://man7.org/linux/man-pages/man2/stat.2.html
  */
-export default class Stats implements fs.Stats {
+export default class Stats extends fs.Stats {
   public static fromBuffer(buffer: Buffer): Stats {
     const size = buffer.readUInt32LE(0),
       mode = buffer.readUInt32LE(4),
@@ -63,10 +63,6 @@ export default class Stats implements fs.Stats {
   public ctimeMs: number;
   public birthtimeMs: number;
   public size: number;
-  public atimeMs: number;
-  public mtimeMs: number;
-  public ctimeMs: number;
-  public birthtimeMs: number;
 
   public get atime(): Date {
     return new Date(this.atimeMs);
